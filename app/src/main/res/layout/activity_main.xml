@@ -18,6 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="Paste Medium link here"
+            android:inputType="text"
             android:layout_weight="9" />
 
         <Button
