@@ -16,19 +16,22 @@ public class MainActivity extends AppCompatActivity {
     EditText link;
     Button btn_visit;
 
-
+    // method run oncreate
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // initializing variables
         browser = (WebView) findViewById(R.id.webView);
         link = (EditText) findViewById(R.id.editTextLink);
         btn_visit = (Button) findViewById(R.id.btn_view);
 
 
+        // initializing browser
         browser.setWebViewClient(new myWebViewClient());
 
+        // button on click listener
         btn_visit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
