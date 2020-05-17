@@ -3,6 +3,8 @@ package com.example.mediumreader;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
@@ -26,8 +28,27 @@ public class MainActivity extends AppCompatActivity {
 
 
         browser.setWebViewClient(new myWebViewClient());
+
+        btn_visit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String url = link.getText().toString();
+
+                browser.getSettings().setLoadsImagesAutomatically(true);
+                browser.getSettings().setJavaScriptEnabled(true);
+
+                browser.loadUrl(url);
+
+            }
+        });
     }
 
     private class myWebViewClient extends WebViewClient {
+
+        @Override
+        public boolean shouldOverrideUrlLoading(WebView view, String url) {
+            view.loadUrl(url);
+            return true;
+        }
     }
 }
