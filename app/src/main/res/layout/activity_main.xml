@@ -19,13 +19,13 @@
             android:layout_height="wrap_content"
             android:hint="Paste Medium link here"
             android:inputType="text"
-            android:layout_weight="9" />
+            android:layout_weight="8" />
 
         <Button
             android:id="@+id/btn_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:text="CLICK"
             android:textSize="18sp"
             android:textColor="#ffffff"
